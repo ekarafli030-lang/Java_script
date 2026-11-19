@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // 1. Buat array 5 nama, tampilkan dengan for...of
+const nama = ["Budi", "Siti", "Andi", "Dewi", "Rizky"];
+
+console.log("=== 1. Daftar Nama ===");
+for (const item of nama) {
+  console.log(item);
+}
+
+// 2. Hapus elemen terakhir, tambah satu di awal
+nama.pop(); // Menghapus "Rizky"
+nama.unshift("Agus"); // Menambahkan "Agus" di awal array
+
+console.log("\n=== 2. Array Nama Setelah Dimodifikasi ===");
+console.log(nama);
+
+// 3. Buat object buku: judul, penulis, harga
+const buku = {
+  judul: "Laskar Pelangi",
+  penulis: "Andrea Hirata",
+  harga: 85000
+};
+
+console.log("\n=== 3. Object Buku ===");
+console.log(buku);
+
+// 4. Dari array buku, filter harga di atas 20000
+const daftarBuku = [
+  { judul: "Laskar Pelangi", penulis: "Andrea Hirata", harga: 85000 },
+  { judul: "Komik Anak", penulis: "Anonim", harga: 15000 },
+  { judul: "Filosofi Teras", penulis: "Henry Manampiring", harga: 98000 },
+  { judul: "Buku Saku", penulis: "Budi", harga: 18000 }
+];
+
+const bukuMahal = daftarBuku.filter((item) => item.harga > 20000);
+
+console.log("\n=== 4. Buku dengan Harga di Atas 20.000 ===");
+console.log(bukuMahal);
+    </script> 
+</body>
+</html>
